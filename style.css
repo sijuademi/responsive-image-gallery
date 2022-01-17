@@ -1,0 +1,135 @@
+/* percent unit are relative unit and depend on the parent  
+Em values are also relative and depend on the parent
+1em = 16px default browser style or what you set for it in your parent element
+REM are relative values and depend on root =16px (it can be changed by changing browser settings or targeting html in CSS)
+viewport units are realtive units, relative to the screen.
+Calc (_) values can be used to perform math operation
+We can also use min-height and max height
+ */
+/* 
+ To get remove default margin and border, use
+ margin 0
+ border 0
+ box-sizing = borderbox
+  flex-wrap: wrap; 
+ flex-flow property is the shorthand for flex-direction and flex-wrap  */
+/*
+ .flex {
+   display: flex;
+   text-align: center;
+   flex-flow: wrap row;
+   justify-content: center;
+  align-items: center;
+  
+}
+.ones {
+  background-color: aqua;
+  height: 300px;
+  width: 400px;
+  flex: 50%;
+}
+.ones p {
+  justify-content: center;
+  align-items: center;
+}
+.two {
+  background-color: aquamarine;
+  height: 300px;
+  width: 400px;
+  flex: 50%;
+}
+.three {
+  background-color: teal;
+  height: 300px;
+  width: 400px;
+}
+.four {
+  background-color: tomato;
+  height: 300px;
+  width: 400px;
+}
+.five {
+  background-color: aqua;
+  height: 300px;
+  width: 400px;
+}
+.six {
+  background-color: aquamarine;
+  height: 300px;
+  width: 400px;
+}
+.seven {
+  background-color: teal;
+  height: 300px;
+  width: 400px;
+}
+.eight {
+  background-color: tomato;
+  height: 300px;
+  width: 400px;
+}
+.nine {
+  background-color: turquoise;
+  height: 300px;
+  width: 400px;
+  flex: 50%;
+}
+.ten {
+  background-color: peachpuff;
+  height: 300px;
+  width: 400px;
+  align-self: flex-start;
+  flex: 50%;
+}
+@media (max-width: 800px) {
+  .flex {
+    flex-direction: column;
+  }
+  .ten,
+  .nine,
+  .ones,
+  .two {
+    flex: 100%;
+  } 
+}  */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#header {
+  padding: 32px;
+  text-align: center;
+}
+#row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+/* create four equal column that sits next to each other */
+#column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+#column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+/* responsive layout- makes a two column-layout instead  */
+@media screen and (max-width: 800px) {
+  #column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+/* responsive layout- makes a two columns stack instead  */
+@media screen and (max-width: 600px) {
+  #column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
